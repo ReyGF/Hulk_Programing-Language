@@ -1,0 +1,14 @@
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\bin\Debug\net8.0\Hulk_Programing-Language.exe
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\bin\Debug\net8.0\Hulk_Programing-Language.deps.json
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\bin\Debug\net8.0\Hulk_Programing-Language.runtimeconfig.json
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\bin\Debug\net8.0\Hulk_Programing-Language.dll
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\bin\Debug\net8.0\Hulk_Programing-Language.pdb
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.AssemblyInfoInputs.cache
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.AssemblyInfo.cs
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.csproj.CoreCompileInputs.cache
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.dll
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\refint\Hulk_Programing-Language.dll
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.pdb
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.genruntimeconfig.cache
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\ref\Hulk_Programing-Language.dll
