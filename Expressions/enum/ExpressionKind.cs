@@ -1,0 +1,5 @@
+enum ExpressionKind
+{
+    NumberExpression,
+    BinaryExpression,
+}
