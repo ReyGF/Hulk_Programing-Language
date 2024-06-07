@@ -12,3 +12,4 @@ C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\refint\Hulk_Pr
 C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.pdb
 C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.genruntimeconfig.cache
 C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\ref\Hulk_Programing-Language.dll
+C:\Users\Reynol\Desktop\Hulk_Programing-Language\obj\Debug\net8.0\Hulk_Programing-Language.sourcelink.json

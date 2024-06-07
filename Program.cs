@@ -17,10 +17,11 @@
 
             var tokens = lexer.GetTokens();
 
-            foreach (Token token in tokens)
-            {
-                Console.WriteLine($"{token.Text} : {token.TokenKind}");
-            }
+            var parser = new Parser(tokens.ToArray());
+
+            var expression = parser.Parse();
+
+            Console.WriteLine(expression.Kind);
 
         }
 
