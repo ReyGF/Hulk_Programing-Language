@@ -35,11 +35,8 @@ class Parser
 
             var right = E(Current);
 
-            Console.WriteLine(currentoperator == TokenKind.PlusToken);
-
             left = (currentoperator == TokenKind.PlusToken) ? new BinarySumExpression(left, right)
-                                                              : new BinaryMinusExpression(left, right);
-
+                                                            : new BinaryMinusExpression(left, right);
         }
 
         return left;
@@ -51,12 +48,9 @@ class Parser
 
         if (currentToken.TokenKind == TokenKind.NumberToken)
         {
-            return new NumberExpression(int.Parse(currentToken.Text));
+            return new NumberExpression(double.Parse(currentToken.Text));
         }
 
         return new ErrorExpression($"No se reconoce el token:{currentToken}");
     }
-
-
-
 }

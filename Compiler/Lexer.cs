@@ -35,6 +35,7 @@ class Lexer
         {
             _position++;
         }
+
         if (char.IsDigit(Current))
         {
             var number = "";
@@ -43,6 +44,8 @@ class Lexer
                 number += Current;
                 _position++;
             }
+            _position--;
+
             return new Token(TokenKind.NumberToken, number);
 
         }

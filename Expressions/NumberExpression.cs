@@ -1,10 +1,15 @@
 class NumberExpression : Expression
 {
-    public int Number { get; }
+    public double Number { get; }
 
-    public NumberExpression(int number)
+    public NumberExpression(double number)
     {
         Number = number;
     }
     public override ExpressionKind Kind => ExpressionKind.NumberExpression;
+
+    public override object Evaluate()
+    {
+        return Number;
+    }
 }

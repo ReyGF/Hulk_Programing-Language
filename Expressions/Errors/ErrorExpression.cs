@@ -7,4 +7,9 @@ class ErrorExpression : Expression
         Text = text;
     }
     public override ExpressionKind Kind => ExpressionKind.ErrorExpression;
+
+    public override object Evaluate()
+    {
+        return Text;
+    }
 }
