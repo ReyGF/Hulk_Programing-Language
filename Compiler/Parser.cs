@@ -23,9 +23,28 @@ class Parser
 
     public Expression Parse() => T();
 
-    private Expression T()
+    private Expression F()
     {
         var left = E(Current);
+
+        while (Current.TokenKind == TokenKind.TimesToken || Current.TokenKind == TokenKind.DivideByToken)
+        {
+            var currentoperator = Current.TokenKind;
+
+            Next();
+
+            var right = E(Current);
+
+            left = (currentoperator == TokenKind.TimesToken) ? new BinaryTimesExpression(left, right)
+                                                            : new BinaryDivideByExpression(left, right);
+        }
+
+        return left;
+    }
+
+    private Expression T()
+    {
+        var left = F();
 
         while (Current.TokenKind == TokenKind.PlusToken || Current.TokenKind == TokenKind.MinusToken)
         {
@@ -33,7 +52,7 @@ class Parser
 
             Next();
 
-            var right = E(Current);
+            var right = F();
 
             left = (currentoperator == TokenKind.PlusToken) ? new BinarySumExpression(left, right)
                                                             : new BinaryMinusExpression(left, right);
