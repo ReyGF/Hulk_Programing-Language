@@ -60,6 +60,10 @@ class Lexer
                 return new Token(TokenKind.TimesToken, "*");
             case '/':
                 return new Token(TokenKind.DivideByToken, "/");
+            case '^':
+                return new Token(TokenKind.PowToken, "^");
+            case '%':
+                return new Token(TokenKind.ModuleToken, "%");
         }
 
         return new Token(TokenKind.InvalidToken, $"{Current}");

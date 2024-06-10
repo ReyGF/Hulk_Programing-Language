@@ -21,11 +21,10 @@
 
             var expression = parser.Parse();
 
-            Console.WriteLine(expression.Kind);
-
             Console.WriteLine(expression.Evaluate());
 
         }
+
 
     }
 }

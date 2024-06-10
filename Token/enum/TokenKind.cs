@@ -7,4 +7,6 @@ enum TokenKind
     MinusToken,
     TimesToken,
     DivideByToken,
+    PowToken,
+    ModuleToken,
 }
