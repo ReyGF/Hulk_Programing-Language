@@ -1,4 +1,4 @@
-class BinaryDivideByExpression : Expression
+sealed class BinaryDivideByExpression : Expression, IBinary
 {
     public Expression Left { get; }
     public Expression Right { get; }

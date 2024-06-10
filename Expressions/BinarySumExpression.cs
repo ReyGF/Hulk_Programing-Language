@@ -1,4 +1,4 @@
-class BinarySumExpression : Expression
+sealed class BinarySumExpression : Expression, IBinary
 {
     public Expression Left { get; }
     public Expression Right { get; }

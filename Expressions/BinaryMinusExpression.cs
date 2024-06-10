@@ -1,4 +1,4 @@
-class BinaryMinusExpression : Expression
+sealed class BinaryMinusExpression : Expression, IBinary
 {
     public Expression Left { get; }
     public Expression Right { get; }

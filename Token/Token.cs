@@ -8,6 +8,4 @@ sealed class Token
         this.Text = Text;
         this.TokenKind = TokenKind;
     }
-
-
 }

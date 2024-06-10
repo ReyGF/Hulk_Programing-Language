@@ -1,6 +1,4 @@
-using Microsoft.VisualBasic;
-
-class Parser
+internal sealed class Parser
 {
     private readonly Token[] _tokens;
 

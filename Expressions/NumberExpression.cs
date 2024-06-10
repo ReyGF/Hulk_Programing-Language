@@ -1,4 +1,4 @@
-class NumberExpression : Expression
+sealed class NumberExpression : Expression
 {
     public double Number { get; }
 

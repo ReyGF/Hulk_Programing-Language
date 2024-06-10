@@ -1,4 +1,4 @@
-class BinaryTimesExpression : Expression
+sealed class BinaryTimesExpression : Expression, IBinary
 {
     public Expression Left { get; }
     public Expression Right { get; }
