@@ -87,6 +87,12 @@ internal sealed class Parser(Token[] tokens)
         {
             return new NumberExpression(double.Parse(currentToken.Text));
         }
+        if (currentToken.TokenKind == TokenKind.OpenParentesisToken)
+        {
+            var expression = Parse();
+            Next();
+            return expression;
+        }
 
         return new ErrorExpression($"No se reconoce el token:{currentToken}");
     }

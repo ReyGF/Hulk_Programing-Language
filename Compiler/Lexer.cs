@@ -57,6 +57,10 @@ internal sealed class Lexer(string text)
                 return new Token(TokenKind.PowToken, "^");
             case '%':
                 return new Token(TokenKind.ModuleToken, "%");
+            case '(':
+                return new Token(TokenKind.OpenParentesisToken, "(");
+            case ')':
+                return new Token(TokenKind.CloseParentesisToken, ")");
         }
 
         return new Token(TokenKind.InvalidToken, $"{Current}");

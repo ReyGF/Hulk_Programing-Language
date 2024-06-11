@@ -9,4 +9,6 @@ enum TokenKind
     DivideByToken,
     PowToken,
     ModuleToken,
+    OpenParentesisToken,
+    CloseParentesisToken,
 }
