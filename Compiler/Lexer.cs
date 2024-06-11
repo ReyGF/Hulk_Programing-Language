@@ -22,7 +22,7 @@ internal sealed class Lexer(string text)
     private Token GetToken()
     {
         if (_position >= text.Length)
-            return new Token(TokenKind.EndLineToken, "\n");
+            return new EndLineToken(TokenKind.EndLineToken, "\n");
 
         while (char.IsWhiteSpace(Current))
         {
@@ -39,31 +39,31 @@ internal sealed class Lexer(string text)
             }
             _position--;
 
-            return new Token(TokenKind.NumberToken, number);
+            return new NumberToken(TokenKind.NumberToken, number);
 
         }
 
         switch (Current)
         {
             case '+':
-                return new Token(TokenKind.PlusToken, "+");
+                return new PlusToken(TokenKind.PlusToken, "+");
             case '-':
-                return new Token(TokenKind.MinusToken, "-");
+                return new MinusToken(TokenKind.MinusToken, "-");
             case '*':
-                return new Token(TokenKind.TimesToken, "*");
+                return new TimesToken(TokenKind.TimesToken, "*");
             case '/':
-                return new Token(TokenKind.DivideByToken, "/");
+                return new DivideByToken(TokenKind.DivideByToken, "/");
             case '^':
-                return new Token(TokenKind.PowToken, "^");
+                return new PowToken(TokenKind.PowToken, "^");
             case '%':
-                return new Token(TokenKind.ModuleToken, "%");
+                return new ModuleToken(TokenKind.ModuleToken, "%");
             case '(':
-                return new Token(TokenKind.OpenParentesisToken, "(");
+                return new OpenParenthesisToken(TokenKind.OpenParentesisToken, "(");
             case ')':
-                return new Token(TokenKind.CloseParentesisToken, ")");
+                return new CloseParenthesisToken(TokenKind.CloseParentesisToken, ")");
         }
 
-        return new Token(TokenKind.InvalidToken, $"{Current}");
+        return new InvalidToken(TokenKind.InvalidToken, $"{Current}");
 
 
     }
