@@ -1,12 +1,7 @@
-sealed class BinaryMinusExpression : Expression, IBinary
+sealed class BinaryMinusExpression(Expression left, Expression right) : Expression, IBinary
 {
-    public Expression Left { get; }
-    public Expression Right { get; }
-    public BinaryMinusExpression(Expression left, Expression right)
-    {
-        Left = left;
-        Right = right;
-    }
+    public Expression Left { get; } = left;
+    public Expression Right { get; } = right;
 
     public override ExpressionKind Kind => ExpressionKind.BinaryMinusExpression;
 

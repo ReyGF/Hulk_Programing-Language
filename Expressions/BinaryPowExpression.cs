@@ -1,14 +1,9 @@
-sealed class BinaryPowExpression : Expression, IBinary
+sealed class BinaryPowExpression(Expression left, Expression right) : Expression, IBinary
 {
-    public Expression Left { get; }
+    public Expression Left { get; } = left;
 
-    public Expression Right { get; }
+    public Expression Right { get; } = right;
 
-    public BinaryPowExpression(Expression left, Expression right)
-    {
-        Left = left;
-        Right = right;
-    }
     public override ExpressionKind Kind => ExpressionKind.BinaryPowExpression;
 
     public override object Evaluate()

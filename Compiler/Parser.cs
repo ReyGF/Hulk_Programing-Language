@@ -1,22 +1,16 @@
-internal sealed class Parser
+internal sealed class Parser(Token[] tokens)
 {
-    private readonly Token[] _tokens;
-
     private int _position;
 
     private Token Current
     {
-        get => (_position >= _tokens.Length) ? new Token(TokenKind.EndLineToken, "\0")
-                                             : _tokens[_position];
+        get => (_position >= tokens.Length) ? new Token(TokenKind.EndLineToken, "\0")
+                                             : tokens[_position];
 
     }
     public void Next()
     {
         _position++;
-    }
-    public Parser(Token[] tokens)
-    {
-        _tokens = tokens;
     }
 
     public Expression Parse() => T();

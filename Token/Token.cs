@@ -1,11 +1,5 @@
-sealed class Token
+sealed class Token(TokenKind TokenKind, string Text)
 {
-    public readonly string Text;
-    public readonly TokenKind TokenKind;
-
-    public Token(TokenKind TokenKind, string Text)
-    {
-        this.Text = Text;
-        this.TokenKind = TokenKind;
-    }
+    public readonly string Text = Text;
+    public readonly TokenKind TokenKind = TokenKind;
 }

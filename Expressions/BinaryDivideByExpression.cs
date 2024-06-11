@@ -1,12 +1,7 @@
-sealed class BinaryDivideByExpression : Expression, IBinary
+sealed class BinaryDivideByExpression(Expression left, Expression right) : Expression, IBinary
 {
-    public Expression Left { get; }
-    public Expression Right { get; }
-    public BinaryDivideByExpression(Expression left, Expression right)
-    {
-        Left = left;
-        Right = right;
-    }
+    public Expression Left { get; } = left;
+    public Expression Right { get; } = right;
 
     public override ExpressionKind Kind => ExpressionKind.BinarySumExpression;
 

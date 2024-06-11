@@ -1,24 +1,17 @@
-internal sealed class Lexer
+internal sealed class Lexer(string text)
 {
-    private readonly string _text;
-
     private int _position;
 
     private char Current
     {
-        get => (_position >= _text.Length) ? '\0' : _text[_position];
-    }
-
-    public Lexer(string text)
-    {
-        _text = text;
+        get => (_position >= text.Length) ? '\0' : text[_position];
     }
 
     public IEnumerable<Token> GetTokens()
     {
         var tokens = new List<Token>();
 
-        while (_position < _text.Length)
+        while (_position < text.Length)
         {
             tokens.Add(GetToken());
             _position++;
@@ -28,7 +21,7 @@ internal sealed class Lexer
 
     private Token GetToken()
     {
-        if (_position >= _text.Length)
+        if (_position >= text.Length)
             return new Token(TokenKind.EndLineToken, "\n");
 
         while (char.IsWhiteSpace(Current))

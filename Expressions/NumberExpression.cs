@@ -1,11 +1,7 @@
-sealed class NumberExpression : Expression
+sealed class NumberExpression(double number) : Expression
 {
-    public double Number { get; }
+    public double Number { get; } = number;
 
-    public NumberExpression(double number)
-    {
-        Number = number;
-    }
     public override ExpressionKind Kind => ExpressionKind.NumberExpression;
 
     public override object Evaluate()
