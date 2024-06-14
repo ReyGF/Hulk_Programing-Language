@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hulk_Programing-Language")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+103705324845bd220b641defd895b2e5782b12ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0faabea1a2a22552bb2690c288551045170b6f05")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hulk_Programing-Language")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hulk_Programing-Language")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
