@@ -2,6 +2,6 @@ internal class EndLineToken(TokenKind TokenKind, string Text) : Token(TokenKind,
 {
     public Expression ToSintaxNode(Func<Expression> Parse, Func<ISintaxNode, Expression> E, Func<Token> GetCurrent, Action Next)
     {
-        throw new NotImplementedException();
+        return new ErrorExpression("ERROR: Missing ENDLINE");
     }
 }
