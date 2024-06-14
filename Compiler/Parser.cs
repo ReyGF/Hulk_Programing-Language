@@ -83,9 +83,7 @@ internal sealed class Parser(Token[] tokens)
     {
         Next();
 
-        Token GetCurrent() => Current;
-
-        return currentToken.ToSintaxNode(Parse, E, GetCurrent, Next);
+        return currentToken.ToSintaxNode(Parse, E, () => Current, Next);
     }
 
 }

@@ -7,13 +7,14 @@
         {
             Console.Write(">");
 
-            var input = "";//Console.ReadLine();
+            var input = Console.ReadLine();
 
-            System.Console.WriteLine(new Parser(
-                                     new Lexer(input).GetTokens()
-                                                     .ToArray())
-                                                     .Parse()
-                                                     .Evaluate());
+            Console.WriteLine(new Parser(
+                              new Lexer(string.IsNullOrEmpty(input) ? "" : input)
+                                                                                 .GetTokens()
+                                                                                 .ToArray())
+                                                                                 .Parse()
+                                                                                 .Evaluate());
 
         }
 
