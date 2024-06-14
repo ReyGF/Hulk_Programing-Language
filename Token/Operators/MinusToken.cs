@@ -1,3 +1,8 @@
-internal class MinusToken(TokenKind TokenKind, string Text) : Token(TokenKind, Text)
+
+internal class MinusToken(TokenKind TokenKind, string Text) : Token(TokenKind, Text), ISintaxNode
 {
+    public Expression ToSintaxNode(Func<Expression> Parse, Func<ISintaxNode, Expression> E, Func<Token> GetCurrent, Action Next)
+    {
+        return new UnaryNegativeExpression(E((ISintaxNode)GetCurrent()));
+    }
 }

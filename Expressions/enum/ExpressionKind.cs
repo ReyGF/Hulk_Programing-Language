@@ -6,4 +6,7 @@ enum ExpressionKind
     BinaryMinusExpression,
     BinaryPowExpression,
     ErrorExpression,
+    UnaryNegativeExpression,
+    UnaryNegationExpression,
+    BoolExpression,
 }

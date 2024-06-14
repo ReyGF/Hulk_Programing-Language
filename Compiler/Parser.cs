@@ -79,12 +79,13 @@ internal sealed class Parser(Token[] tokens)
     }
 
 
-    private Expression E(ISintaxNode currentToken)
+    public Expression E(ISintaxNode currentToken)
     {
         Next();
 
-        Token getCurrent() => Current;
+        Token GetCurrent() => Current;
 
-        return currentToken.ToSintaxNode(Parse, getCurrent, ref _position);
+        return currentToken.ToSintaxNode(Parse, E, GetCurrent, Next);
     }
+
 }
