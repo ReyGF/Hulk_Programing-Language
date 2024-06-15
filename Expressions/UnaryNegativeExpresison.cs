@@ -2,8 +2,5 @@ internal sealed class UnaryNegativeExpression(Expression expression) : Expressio
 {
     public Expression Expression { get; } = expression;
     public override ExpressionKind Kind => ExpressionKind.UnaryNegativeExpression;
-    public override object Evaluate()
-    {
-        return -(double)Expression.Evaluate();
-    }
+    public override object Evaluate() => -(double)Expression.Evaluate();
 }

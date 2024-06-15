@@ -5,9 +5,6 @@ sealed class BinarySumExpression(Expression left, Expression right) : Expression
 
     public override ExpressionKind Kind => ExpressionKind.BinarySumExpression;
 
-    public override object Evaluate()
-    {
-        return (double)Left.Evaluate() + (double)Right.Evaluate();
-    }
+    public override object Evaluate() => (double)Left.Evaluate() + (double)Right.Evaluate();
 
 }

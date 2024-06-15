@@ -5,8 +5,5 @@ sealed class BinaryMinusExpression(Expression left, Expression right) : Expressi
 
     public override ExpressionKind Kind => ExpressionKind.BinaryMinusExpression;
 
-    public override object Evaluate()
-    {
-        return (double)Left.Evaluate() - (double)Right.Evaluate();
-    }
+    public override object Evaluate() => (double)Left.Evaluate() - (double)Right.Evaluate();
 }

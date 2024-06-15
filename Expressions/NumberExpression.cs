@@ -4,8 +4,5 @@ sealed class NumberExpression(double number) : Expression
 
     public override ExpressionKind Kind => ExpressionKind.NumberExpression;
 
-    public override object Evaluate()
-    {
-        return Number;
-    }
+    public override object Evaluate() => Number;
 }

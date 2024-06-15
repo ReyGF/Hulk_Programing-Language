@@ -6,8 +6,5 @@ sealed class BinaryModuleExpression(Expression left, Expression right) : Express
 
     public override ExpressionKind Kind => ExpressionKind.BinaryPowExpression;
 
-    public override object Evaluate()
-    {
-        return (double)Left.Evaluate() % (double)Right.Evaluate();
-    }
+    public override object Evaluate() => (double)Left.Evaluate() % (double)Right.Evaluate();
 }

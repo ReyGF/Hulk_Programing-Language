@@ -4,8 +4,6 @@ class ErrorExpression(string text) : Expression
 
     public override ExpressionKind Kind => ExpressionKind.ErrorExpression;
 
-    public override object Evaluate()
-    {
-        return Text;
-    }
+    public override object Evaluate() => Text;
+
 }
