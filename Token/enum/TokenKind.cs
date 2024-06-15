@@ -11,4 +11,5 @@ enum TokenKind
     ModuleToken,
     OpenParentesisToken,
     CloseParentesisToken,
+    BooleanToken,
 }

@@ -1,3 +1,4 @@
+
 internal sealed class Lexer(string text)
 {
     private int _position;
@@ -32,15 +33,30 @@ internal sealed class Lexer(string text)
         if (char.IsDigit(Current))
         {
             var number = "";
-            while (char.IsDigit(Current))
+            do
             {
                 number += Current;
                 _position++;
             }
-            _position--;
+            while (char.IsDigit(Current));
 
             return new NumberToken(TokenKind.NumberToken, number);
+        }
+        if (char.IsLetter(Current))
+        {
+            var word = "";
+            do
+            {
+                word += Current;
+                _position++;
+            }
+            while (char.IsLetter(Current));
 
+            return word switch
+            {
+                "True" => new BooleanToken(TokenKind.BooleanToken, "True"),
+                _ => new InvalidToken(TokenKind.InvalidToken, word)
+            };
         }
 
         return Current switch
