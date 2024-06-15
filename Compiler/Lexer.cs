@@ -43,29 +43,18 @@ internal sealed class Lexer(string text)
 
         }
 
-        switch (Current)
+        return Current switch
         {
-            case '+':
-                return new PlusToken(TokenKind.PlusToken, "+");
-            case '-':
-                return new MinusToken(TokenKind.MinusToken, "-");
-            case '*':
-                return new TimesToken(TokenKind.TimesToken, "*");
-            case '/':
-                return new DivideByToken(TokenKind.DivideByToken, "/");
-            case '^':
-                return new PowToken(TokenKind.PowToken, "^");
-            case '%':
-                return new ModuleToken(TokenKind.ModuleToken, "%");
-            case '(':
-                return new OpenParenthesisToken(TokenKind.OpenParentesisToken, "(");
-            case ')':
-                return new CloseParenthesisToken(TokenKind.CloseParentesisToken, ")");
-        }
-
-        return new InvalidToken(TokenKind.InvalidToken, $"{Current}");
-
-
+            '+' => new PlusToken(TokenKind.PlusToken, "+"),
+            '-' => new MinusToken(TokenKind.MinusToken, "-"),
+            '*' => new TimesToken(TokenKind.TimesToken, "*"),
+            '/' => new DivideByToken(TokenKind.DivideByToken, "/"),
+            '^' => new PowToken(TokenKind.PowToken, "^"),
+            '%' => new ModuleToken(TokenKind.ModuleToken, "%"),
+            '(' => new OpenParenthesisToken(TokenKind.OpenParentesisToken, "("),
+            ')' => new CloseParenthesisToken(TokenKind.CloseParentesisToken, ")"),
+            _ => new InvalidToken(TokenKind.InvalidToken, $"{Current}"),
+        };
     }
 
 
