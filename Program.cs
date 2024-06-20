@@ -7,7 +7,7 @@
         {
             Console.Write(">");
 
-            var input = Console.ReadLine();
+            var input = /*"3*2-(5+4)";*/Console.ReadLine();
 
             Console.WriteLine(new Parser(new Lexer(string.IsNullOrEmpty(input) ? "" : input).GetTokens()
                                                                                             .ToArray())

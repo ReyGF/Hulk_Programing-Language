@@ -40,6 +40,8 @@ internal sealed class Lexer(string text)
             }
             while (char.IsDigit(Current));
 
+            _position--;
+
             return new NumberToken(TokenKind.NumberToken, number);
         }
         if (char.IsLetter(Current))
@@ -52,9 +54,12 @@ internal sealed class Lexer(string text)
             }
             while (char.IsLetter(Current));
 
+            _position--;
+
             return word switch
             {
                 "True" => new BooleanToken(TokenKind.BooleanToken, "True"),
+                "False" => new BooleanToken(TokenKind.BooleanToken, "False"),
                 _ => new InvalidToken(TokenKind.InvalidToken, word)
             };
         }
