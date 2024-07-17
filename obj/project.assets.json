@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Reynol\\Desktop\\Hulk_Programing-Language\\Hulk_Programing-Language.csproj",
+      "projectUniqueName": "c:\\Users\\Reynol\\Desktop\\Hulk_Programing-Language\\Hulk_Programing-Language.csproj",
       "projectName": "Hulk_Programing-Language",
-      "projectPath": "C:\\Users\\Reynol\\Desktop\\Hulk_Programing-Language\\Hulk_Programing-Language.csproj",
+      "projectPath": "c:\\Users\\Reynol\\Desktop\\Hulk_Programing-Language\\Hulk_Programing-Language.csproj",
       "packagesPath": "C:\\Users\\Reynol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Reynol\\Desktop\\Hulk_Programing-Language\\obj\\",
+      "outputPath": "c:\\Users\\Reynol\\Desktop\\Hulk_Programing-Language\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Reynol\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
